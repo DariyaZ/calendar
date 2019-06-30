@@ -1,0 +1,28 @@
+table td, tr, th{
+  width: 80px;
+  height: 80px;
+  border: 1px solid #3d3d3b;
+}
+
+.calendar_table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.calendar_table .table_heading {
+  background-color: #4c5870;
+  color: #fff;
+}
+
+.calendar_table tr {
+  text-align: center;
+}
+
+.daysCells {
+  background-color: #ebedec;
+}
+
+.table_caption {
+  padding: 20px 0;
+  font-size: 24px;
+}
