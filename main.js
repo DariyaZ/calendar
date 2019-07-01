@@ -3,19 +3,15 @@
 function createCalendar(id, year, month) {
   let container = document.getElementById(id);
 
-    // if (document.getElementsByTagName('table')) {
-    //   let oldTable = document.container.children[0];
-    // }
-    
-
-    // container.removeChild(oldTable);
-
   let table = document.createElement('table');
   table.setAttribute('class', 'calendar_table');
 
   let days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   let date = new Date(year, month - 1, 1); 
   let weekDay = days[date.getDay()];
+
+  let daysInMonth = 32 - new Date(year, month - 1, 32).getDate();
+  console.log(daysInMonth);
 
   let number  = 0;
 
@@ -49,11 +45,11 @@ function createCalendar(id, year, month) {
   
   let tableData = table.getElementsByTagName('td');
   let k = 1; 
-  for (let i = number; i < tableData.length; i++) {
+  for (let i = number; i < daysInMonth + number; i++) {
     tableData[i].innerHTML = k;
     tableData[i].setAttribute('class', 'daysCells');
     k++;
   }
 }
 
-createCalendar("cal", 2019, 5);
+createCalendar("cal", 2019, 7);
