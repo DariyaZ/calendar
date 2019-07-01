@@ -11,7 +11,6 @@ function createCalendar(id, year, month) {
   let weekDay = days[date.getDay()];
 
   let daysInMonth = 32 - new Date(year, month - 1, 32).getDate();
-  console.log(daysInMonth);
 
   let number  = 0;
 
