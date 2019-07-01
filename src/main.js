@@ -3,6 +3,13 @@
 function createCalendar(id, year, month) {
   let container = document.getElementById(id);
 
+    // if (document.getElementsByTagName('table')) {
+    //   let oldTable = document.container.children[0];
+    // }
+    
+
+    // container.removeChild(oldTable);
+
   let table = document.createElement('table');
   table.setAttribute('class', 'calendar_table');
 
@@ -37,9 +44,10 @@ function createCalendar(id, year, month) {
       else tr.appendChild(document.createElement('td'));
     }
   }
+  
   container.appendChild(table);
-
-  let tableData = document.getElementsByTagName('td');
+  
+  let tableData = table.getElementsByTagName('td');
   let k = 1; 
   for (let i = number; i < tableData.length; i++) {
     tableData[i].innerHTML = k;
